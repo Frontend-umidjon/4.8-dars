@@ -1,9 +1,9 @@
-  // Foydalanuvchilar uchun object
-  const users = {
-    admin: { name: "Admin", username: "admin", password: "admin123" },
-    user: { name: "User", username: "user", password: "user123" }
+  // Foydalanuvchilar uchun Array
+  const users = [
+{ name: "Admin", username: "admin", password: "admin123" },
+ { name: "User", username: "user", password: "user123" }
 
-  };
+  ];
 
   // Elementlar
   const messageElement = document.querySelector('.message');
