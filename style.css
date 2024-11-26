@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: #0f0f0f;
+    color: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* Gradient orqa taraf */
+body::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(32, 32, 32, 0.4), #0f0f0f 80%);
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+/* container */
+.container {
+    background: rgba(25, 25, 25, 0.9);
+    padding: 40px 50px;
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.7), 0 0 30px rgba(0, 255, 255, 0.2);
+    text-align: center;
+    max-width: 400px;
+    animation: fadeIn 1.5s ease;
+}
+/* chiroyli animatsiya */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* title */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #00e5ff;
+    text-shadow: 0 0 15px #00e5ff, 0 0 30px rgba(0, 229, 255, 0.5);
+}
+
+/* buttonlar */
+button {
+    background: linear-gradient(to right, #00e5ff, #00aaff);
+    color: #0f0f0f;
+    border: none;
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 10px 5px;
+    font-weight: bold;
+    box-shadow: 0 6px 20px rgba(0, 229, 255, 0.4);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(to right, #00aaff, #00e5ff);
+    box-shadow: 0 10px 30px rgba(0, 229, 255, 0.6);
+}
+
+button:active {
+    transform: translateY(2px);
+    box-shadow: 0 3px 10px rgba(0, 229, 255, 0.3);
+}
+
+/* errorlar */
+p {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    padding: 10px;
+    background: rgba(50, 50, 50, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    color: #e0e0e0;
+}
+
+/* Telefonda ko'rish uchun */
+@media (max-width: 500px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    button {
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
