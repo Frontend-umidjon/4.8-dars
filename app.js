@@ -60,8 +60,8 @@
           }
 
 
-          messageElement.textContent = `Welcome, ${users[username].name}!`;
+          messageElement.innerHTML = `Welcome, ${users[username].name}!`;
       } catch (error) {
-          messageElement.textContent = ` ${error.message}`;
+          messageElement.innerHTML = ` ${error.message}`;
       }
   }
